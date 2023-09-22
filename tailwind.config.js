@@ -20,7 +20,10 @@ export default {
         },
         lavendar: {
           gl: "#903AFF",
-        }
+        },
+      },
+      backgroundImage: {
+        "gradient-gl": "linear-gradient(270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%)",
       },
     },
   },

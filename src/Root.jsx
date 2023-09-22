@@ -1,25 +1,18 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+import Navbar from "global/Navbar";
+import Footer from "global/Footer";
 
 function Root() {
+  const path = useLocation().pathname;
 
   return (
-    <>
-      <p className="font-montserrat">Root</p>
-      <ul className="flex mx-auto gap-5 px-5 font-montserrat">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-        <li>
-          <Link to="/register">Register</Link>
-        </li>
-      </ul>
-      <div className="font-montserrat">
+    <div className="min-h-screen flex flex-col font-montserrat bg-indigo-gl text-white [&_*]:[-webkit-tap-highlight-color:transparent]">
+      <Navbar />
+      <div className="min-h-[calc(100vh-6.937rem)] sm:min-h-[calc(100vh-8.25rem)] h-full flex items-center justify-center overscroll-y-scroll">
         <Outlet />
       </div>
-    </>
+      {path == "/" && (<Footer />)}
+    </div>
   )
 }
 
