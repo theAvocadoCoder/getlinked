@@ -4,11 +4,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Root from "./Root";
+import Root from "./Root.jsx";
 import Contact from "./pages/Contact";
 import Landing from "./pages/Landing";
 import Register from "./pages/Register";
-import _404 from "./pages/404";
+import InProgress from "./global/InProgress/index.jsx";
+import _404 from "./global/404/index.jsx";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -31,6 +32,18 @@ const router = createBrowserRouter([
           {
             path: "/register",
             element: <Register />,
+          },
+          {
+            path: "/timeline",
+            element: <InProgress />,
+          },
+          {
+            path: "/overview",
+            element: <InProgress />,
+          },
+          {
+            path: "/faqs",
+            element: <InProgress />,
           },
         ]
       }
