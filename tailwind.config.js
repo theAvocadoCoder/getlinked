@@ -10,6 +10,7 @@ export default {
       fontFamily: {
         montserrat: ['"Montserrat"', ...defaultTheme.fontFamily.sans],
         "clash-display": ['"Clash Display"', ...defaultTheme.fontFamily.sans],
+        "unica-one": ['"Unica One"', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         indigo: {
