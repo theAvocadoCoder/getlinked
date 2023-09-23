@@ -18,7 +18,7 @@ function Navbar() {
   const path = useLocation().pathname;
 
   return (
-    <nav className="flex items-center w-full justify-between px-12 lg:px-16 xl:px-32 pt-[1.875rem] pb-[1.44rem] lg:pt-[4.1875rem]">
+    <nav className="flex fixed top-0 left-0 bg-indigo-gl/70 [-webkit-backdrop-filter:blur(.75rem)] [backdrop-filter:blur(.75rem)] items-center w-full justify-between px-12 lg:px-16 xl:px-32 pt-[1.875rem] pb-[1.44rem] lg:pt-[4.1875rem] z-10 border-b border-b-slate-100/30">
       <Link to="/">
         <img src={logo} alt="" className={`${isSidebarOpen ? "hidden lg:block" : ""} h-[.937rem] lg:h-[2.25rem]`} />
       </Link>
